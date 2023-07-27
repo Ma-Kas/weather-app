@@ -1,0 +1,9 @@
+:root {
+  --main-bg-color: black;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
