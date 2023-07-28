@@ -1,3 +1,6 @@
+/*!*********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/style.css ***!
+  \*********************************************************************/
 :root {
   --font-color: #ffffff;
   --font-color-transparent: #ffffffa5;
@@ -15,7 +18,7 @@
     sans-serif;
   --font-size-regular: 16px;
   --font-bold: 700;
-  --main-bg: url("../img/night/bg/cloudy.jpg");
+  --main-bg: url(9a85330ef76211dffb41.jpg);
   --transparent-light: rgba(200, 200, 200, 0.15);
   --transparent-lighter: rgba(200, 200, 200, 0.25);
   --transparent-lines: rgba(255, 255, 255, 0.3);
@@ -230,3 +233,4 @@ input:focus {
   height: 100%;
   width: 1px;
 }
+
