@@ -8,18 +8,18 @@
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
-    "Segoe UI",
+    'Segoe UI',
     Roboto,
     Oxygen,
     Ubuntu,
     Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
+    'Open Sans',
+    'Helvetica Neue',
     sans-serif;
   --font-size-regular: 16px;
   --font-bold: 700;
-  --main-bg: url(9a85330ef76211dffb41.jpg);
   --transparent-light: rgba(200, 200, 200, 0.15);
+  --transparent-highlight: rgba(200, 200, 200, 0.35);
   --transparent-lighter: rgba(200, 200, 200, 0.25);
   --transparent-lines: rgba(255, 255, 255, 0.3);
   --sidebar-blur: 6px;
@@ -43,9 +43,33 @@ html {
   padding: 0;
 }
 
+#loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 #content {
+  visibility: hidden;
   color: var(--font-color);
-  background: left / cover var(--main-bg);
   height: 100vh;
   width: 100vw;
   display: grid;
@@ -79,6 +103,7 @@ html {
 }
 
 #today-weather {
+  text-align: end;
   font-size: 5rem;
   font-weight: var(--font-bold);
 }
@@ -109,10 +134,16 @@ html {
 }
 
 .hourly-card {
-  background-color: var(--transparent-light);
+  box-sizing: border-box;
+  background-color: var(--transparent-lighter);
   border-radius: var(--border-radius-large);
   height: 100%;
   width: var(--card-width);
+}
+
+.hourly-card.highlight {
+  background-color: var(--transparent-highlight);
+  border: 2px solid var(--font-color-transparent);
 }
 
 .card-content {
@@ -242,14 +273,14 @@ input:focus {
 }
 
 .line-separator-horizontal {
-  content: "";
+  content: '';
   background-color: var(--transparent-lines);
   height: 2px;
   width: 100%;
 }
 
 .line-separator-vertical {
-  content: "";
+  content: '';
   background-color: var(--transparent-lines);
   height: 100%;
   width: 1px;
