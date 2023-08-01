@@ -36,7 +36,7 @@ let fullWeatherData = {};
 async function fetchWeatherData(lookupLocation) {
   const location = lookupLocation;
   const apiResponse = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=7dfdd5c7ad294aa294643209232707&q=${location}&days=3&aqi=no&alerts=no`,
+    `https://api.weatherapi.com/v1/forecast.json?key=7dfdd5c7ad294aa294643209232707&q=${location}&days=3&aqi=no&alerts=no`,
     { mode: 'cors' },
   );
   if (!apiResponse.ok) {
